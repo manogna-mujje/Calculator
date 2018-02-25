@@ -1,8 +1,6 @@
 // Function to perform operations
 
 function sum (leftOperand, rightOperand) {
-  var answer = leftOperand + rightOperand;
-  console.log(`Answer from functions: ${answer}`);
     return (leftOperand + rightOperand);
   }
 

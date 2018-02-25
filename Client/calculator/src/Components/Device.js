@@ -26,7 +26,7 @@ class Device extends React.Component {
 
         if(i === '+' || i === '-' || i === '*' || i === '/'){
             if(isOp) {
-                document.getElementById("error").innerHTML = "Invalid Expression";
+                document.getElementById("error").innerHTML = "Error: Invalid Expression";
             }
             isOp = true;
             leftOperand = currentText;
@@ -36,7 +36,7 @@ class Device extends React.Component {
 
         } else if(i === '='){
             if(isOp) {
-                document.getElementById("error").innerHTML = "Invalid Expression";
+                document.getElementById("error").innerHTML = "Error: Invalid Expression";
             }
             isOp = false;
             leftOperand = leftOperand.toString();
@@ -94,6 +94,7 @@ class Device extends React.Component {
                 <div className="button-row"> 
                 {this.renderBtn('AC')} {this.renderBtn(0)} {this.renderBtn('=')} {this.renderBtn('/')}
                 </div>
+                <br></br>
                 <div id="error"> </div>
             </div>
         );
